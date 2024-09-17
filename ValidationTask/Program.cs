@@ -31,12 +31,22 @@
         static bool ValidName(string name)
         {
             // name must be at least two characters and contain only letters
+            int nameLength = name.Length;
+            if (nameLength < 2)
+            {
+                return false;  //COME BACK TO MEEEEE
+            }
+            return true;
         }
 
-        static bool validAge(int age)
+        static bool validAge(int age)  //DONEEE
         {
             //age must be between 11 and 18 inclusive
-
+            if (age >= 11 && age <= 18) ;
+            {
+                return true;
+            }
+            return false;
         }
 
    
