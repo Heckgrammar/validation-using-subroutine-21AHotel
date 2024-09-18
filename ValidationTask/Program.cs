@@ -69,7 +69,7 @@
                 {
                     if
                     {
-                        // Check password contains no runs of more than 2 consecutive or repeating letters or numbers //COME BACK TO MEEEEE
+                        // Check password contains no runs of more than 2 consecutive or repeating letters or numbers //COME BACK TO MEEEEe
                         // AAbbdd!2 = valid (only 2 consecutive letters A and B and only 2 repeating of each)
                         // abC461*+ = not valid (abC are 3 consecutive letters)
                         // 987poiq! = not valid (987 are consecutive)
