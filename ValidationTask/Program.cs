@@ -13,17 +13,26 @@
             firstName = Console.ReadLine();
             Console.Write("Enter last name: ");
             lastName = Console.ReadLine();
+            string name = firstName + lastName;
+            ValidName(name);
             Console.Write("Enter age: ");
             age = Convert.ToInt32(Console.ReadLine());
+            ValidAge(age);
             Console.Write("Enter Password: ");
             password = Console.ReadLine();
             Console.Write("Enter email address: ");
             emailAddress = Console.ReadLine();
+            
 
 
-
-            username = createUserName(firstName, lastName, age);
-            Console.WriteLine($"Username is {username}, you have successfully registered please remember your password");
+            if (ValidName = true);
+            {
+                if (ValidAge = true)
+                {
+                    username = createUserName(firstName, lastName, age);
+                    Console.WriteLine($"Username is {username}, you have successfully registered please remember your password");
+                }
+            }
 
             //  Test your program with a range of tests to show all validation works
             // Show your evidence in the Readme
