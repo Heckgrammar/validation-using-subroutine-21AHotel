@@ -20,8 +20,10 @@
             ValidAge(age);
             Console.Write("Enter Password: ");
             password = Console.ReadLine();
+            ValidPassword(password);
             Console.Write("Enter email address: ");
             emailAddress = Console.ReadLine();
+            ValidEmail(emailAddress);
             
 
 
@@ -29,9 +31,19 @@
             {
                 if (ValidAge = true)
                 {
-                    username = createUserName(firstName, lastName, age);
-                    Console.WriteLine($"Username is {username}, you have successfully registered please remember your password");
+                    if (ValidPassword = true)
+                    {
+                        if (ValidEmail = true)
+                        {
+                            username = createUserName(firstName, lastName, age);
+                            Console.WriteLine($"Username is {username}, you have successfully registered please remember your password");
+                        }
+                    }
                 }
+                
+            }
+            {
+                Console.Writeline("Please try again");
             }
 
             //  Test your program with a range of tests to show all validation works
@@ -76,8 +88,30 @@
                                                                                                       // ab£$%^&* = not valid
                                                                                                       // QWERTYu! = valid
                 {
-                    // while()
+                    char previousChar = '\0';
+                    char currentChar = '\0';
+                    int count = 1;
+
+                    for (int i = 0; i < password.Length; i++)
                     {
+                        currentChar = password[i];
+                        if (currentChar == previousChar)
+                    {
+                    count++;
+                    if (count > 2) // More than 2 consecutive characters
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        count = 1; // Reset count for a different character
+                    }
+
+                    previousChar = currentChar;
+                    }
+                        return true; // Valid password
+                    }
+
                         // Check password contains no runs of more than 2 consecutive or repeating letters or numbers //COME BACK TO MEEEE
                         // AAbbdd!2 = valid (only 2 consecutive letters A and B and only 2 repeating of each)
                         // abC461*+ = not valid (abC are 3 consecutive letters)
@@ -98,7 +132,8 @@
 
 
             }
-            static bool validEmail(string email)  //come back to meeee
+            static bool validEmail(string email)  //i am genuinely so lost
+                                                  //I know i need to do this is have absolutely no idea how to possibly do this task.
             {
                 // a valid email address
                 // has at least 2 characters followed by an @ symbol
